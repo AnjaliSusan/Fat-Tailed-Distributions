@@ -6,6 +6,7 @@ import pandas as pd
 path = '/content/drive/MyDrive/Honours work/Climate Seminar - Kedar/Daily Prec 1951-2020.csv'
 precip = pd.read_csv(path)
 
+## Access to this data is restricted. Please contact owner of repository if data is required
 #%%
 import seaborn as sns
 import numpy as np
