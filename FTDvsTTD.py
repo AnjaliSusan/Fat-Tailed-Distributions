@@ -564,3 +564,43 @@ plt.plot(expon,p,color='blue')
 plt.plot(pareto,p,color='green')
 plt.show()
 
+#Reduction in Variance
+import matplotlib.pyplot as plt
+  
+# x axis values
+x = np.linspace(0,100,100)
+# corresponding y axis values
+k1= 1
+k2 = 0.5
+k3 = 0
+
+y1 = []
+for i in x:
+  y1 += [i**((k1-1)/(2-k1))]
+
+y2 = []
+for i in x:
+  y2 += [i**((k2-1)/(2-k2))]
+
+y3 = []
+for i in x:
+  y3 += [i**((k3-1)/(2-k3))]
+
+
+
+
+plt.plot(x, y1, 'blue',label = "K = 1")
+plt.plot(x, y2, 'red', label = "K = 0.5")
+plt.plot(x, y3, 'green', label = "K = 0")
+  
+
+plt.xlabel('n summands')
+
+plt.ylabel('Variance')
+  
+
+plt.title('Reduction in Variance')
+  
+plt.legend()
+
+plt.show()
